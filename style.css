@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #81B29A;
+    color: black;
+
+}
+header nav{
+    background-color: #3D405B;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    color: white;
+
+}
+
+header nav h1{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+    
+}
+
+form input[type="text"]{
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+form input[type="text"],button[type="submit"]{
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+button[type="submit"]{
+    background-color: #E07A5F;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ef7755;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Maine section */
+.recipeContainer{
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow: 0 5px 10px #1c0f13,.9  ,#3D405B,0.9;
+    cursor: pointer;
+    place-items: center;
+}
+
+.recipe{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    max-width: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+.recipe:hover{
+    transform: scale(1.1);
+}
+.recipe span{
+    font-weight: 600;
+}
+.recipe img{
+    height: 300px;
+    border-radius: 10px;
+}
+.recipe h3{
+    font-size: 20ox;
+    color: black;
+    margin-block: 5px;
+}
+
+.recipe p{
+    margin: 5px 0;
+
+}
+.recipe button{
+    font-size:  20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: #E07A5F;
+    border: none;
+}
+.recipe button:hover{
+    font-size:  25px;
+    font-weight: 610;
+    padding: 11px;
+    border-radius: 10px;
+    background-color: #db6a4b;
+    border: none;
+}
+.recipeDetails{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #696969;
+    color: white;
+    border-radius: 10px;
+    -webkit-transform: translate(-50%,-50%);
+    width: 45%;
+    height: 65%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+/* Addin scroll ball to recipe details popup */
+.recipeDetails::-webkit-scrollbar{
+    width: 10px;
+}
+.recipeDetails::-webkit-scrollbar-thumb{
+   background-color: #91727c;
+   border-radius: 10px; 
+}
+.recipeDetailsContent{
+    padding: 30px;
+    text-transform: uppercase;
+    
+}
+.Instructions{
+    line-height: 30px;
+}
+.IngredientList li{ 
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+.IngredientList p{ 
+    margin-bottom: 30px;
+    white-space: pre-line;
+
+}
+.recipeName{
+    text-align: center;
+    position:sticky;
+    top: 1px;
+    background-color: #696666;
+}
+
+@media screen and (max-width:600px) {
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20;
+    }
+}
+
+.recipeCloseBtn{
+  
+    font-size:  20px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 1px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: #E07A5F;
+    border: none;
+    position: sticky;
+    top: 0px;
+    bottom: 0px;
+    left: 1000px;
+    z-index: 5;
+
+}
+.notFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25pxpx;
+}
+.notTyped{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25pxpx;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+   background-color: #296347;
+   border-radius: 10px; 
+}
+body::-webkit-scrollbar-track{
+    background-color: #81B29A;
+}
